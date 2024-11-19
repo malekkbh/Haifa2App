@@ -1,9 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import Images from '@/assets/images/Images'
 //rnfes
 const Card = (props : any) => {
   return (
     <View style={styles.container}>
+      <Image source={props.img} style={styles.cat} />
       <Text style={styles.txt}>{props.txt + ":"}</Text>
       <Text style={styles.txt}>{props.age}</Text>
     </View>
@@ -19,6 +21,11 @@ const styles = StyleSheet.create({
         marginRight: 10,
     }, 
     container:{
-        flexDirection:'row'
+        flexDirection:'row' , 
+        marginTop: 25
+    }, 
+    cat:{
+      width: 80 , 
+      height: 80 ,
     }
 })

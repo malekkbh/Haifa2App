@@ -58,3 +58,25 @@ car.speed = 1;
 car.color = "red";
 
 console.log("car: ", car);
+
+const arr = [100, 90, 88, 70, 50, 30];
+arr.pop();
+arr.push(45);
+arr.unshift(88);
+
+arr.forEach((item, index) => {
+  console.log("grade: ", item, "index:", index);
+});
+
+const grades = arr.map((item) => {
+  return { grade: item, isPass: item > 55 };
+});
+
+console.log("grades: ", grades);
+
+const passStudents = arr.filter((item) => item > 55);
+const passStudentsCount = passStudents.length;
+
+console.log("pass: ", passStudents);
+
+const minGrade = arr.find((item) => item == 45);

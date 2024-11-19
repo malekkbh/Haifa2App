@@ -1,15 +1,22 @@
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import Card from "@/components/Card";
+import data from "@/constants/data";
 
 const index = () => {
+  const renderProducts = () => {
+    const products = data.map((product) => {
+      return <Card txt={product.txt} age={product.age} img={product.img} />;
+    });
+
+    return products;
+  };
+
   return (
     <View style={styles.conatiner}>
-      <Text style={styles.txt}>index</Text>
-      <View style={styles.box}></View>
-      <Card txt="Doaa" age={16} />
-      <Card txt="Lima" age={20} />
-      <Card txt="Ahmad" age={17} />
+      <ScrollView showsVerticalScrollIndicator={false}>
+        {renderProducts()}
+      </ScrollView>
     </View>
   );
 };
@@ -20,10 +27,10 @@ const styles = StyleSheet.create({
   conatiner: {
     flex: 1,
     backgroundColor: "red",
-    paddingTop: 45,
+    paddingTop: 65,
     alignItems: "center",
     // flexDirection:'row' ,
-    justifyContent: "space-between",
+    // justifyContent: "space-between",
   },
   txt: {
     fontSize: 30,
