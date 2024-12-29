@@ -35,9 +35,11 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginLeft: 20,
     marginTop: 20,
+    color:'black'
   },
   price: {
     fontSize: 25,
     marginLeft: 20,
+    color:'black'
   },
 });

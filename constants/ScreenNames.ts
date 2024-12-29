@@ -1,5 +1,6 @@
-const ScreenNames ={
-    Product :'Product'
-}
+const ScreenNames = {
+  Product: "Product",
+  Home: "Home",
+};
 
-export default ScreenNames
+export default ScreenNames;

@@ -3,7 +3,7 @@ import React from "react";
 import Card from "@/components/Card";
 import data from "@/constants/data";
 
-const index = () => {
+const Home = () => {
   const renderProducts = () => {
     const products = data.map((product) => {
       return <Card txt={product.txt} age={product.age} img={product.img} />;
@@ -21,12 +21,11 @@ const index = () => {
   );
 };
 
-export default index;
+export default Home;
 
 const styles = StyleSheet.create({
   conatiner: {
     flex: 1,
-    backgroundColor: "red",
     paddingTop: 65,
     alignItems: "center",
     // flexDirection:'row' ,
